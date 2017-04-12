@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="__picker_pager_bg">#CA000000</color>
+    <color name="__picker_selected_bg">#44000000</color>
+    <color name="__picker_black_40">#282828</color>
+    <color name="__picker_common_primary">#f3f3f3</color>
+    <color name="__picker_text_40">#282828</color>
+    <color name="__picker_text_80">#505050</color>
+    <color name="__picker_text_120">#787878</color>
+    <color name="__picker_item_photo_border_n">#33ffffff</color>
+    <color name="menue_check">#5ac2f7</color>
+    <color name="menue_nocheck">#ffffff</color>
+    <color name="menue_check_text_color">#ffffff</color>
+    <color name="menue_nocheck_text_color">#b5b5b5</color>
+    <color name="submit_bg">#398de3</color>
+</resources>
