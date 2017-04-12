@@ -46,7 +46,7 @@ public class PhotoDisplayAdapter extends SelectableAdapter<PhotoDisplayAdapter.P
     @Override
     public PhotoViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Log.i("lsw", "viewType__------" + viewType);
-        final View itemView = inflater.inflate(R.layout.photoitem, parent, false);
+        final View itemView = inflater.inflate(R.layout.picker_photo_item, parent, false);
         final PhotoViewHolder holder = new PhotoViewHolder(itemView);
         // 当返回的viewType为拍照的话，给这个位置设置监听
         if (viewType == ITEM_TYPE_PHOTO) {

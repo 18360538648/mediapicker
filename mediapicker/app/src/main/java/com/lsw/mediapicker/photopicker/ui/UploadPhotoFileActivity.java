@@ -1,4 +1,4 @@
-package com.lsw.mediapicker.photopicker;
+package com.lsw.mediapicker.photopicker.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -9,21 +9,17 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-
 import com.lsw.mediapicker.R;
-import com.lsw.mediapicker.photopicker.adapter.UploadMediaAdapter;
+import com.lsw.mediapicker.photopicker.adapter.UploadPhotoAdapter;
 import com.lsw.mediapicker.photopicker.utils.Const;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.List;
 
 /**
  * Created by Luosiwei on 2017/3/23.
  */
-public class UploadMediaFileActivity extends Activity {
-    private UploadMediaAdapter mediaAdapter;
+public class UploadPhotoFileActivity extends Activity {
+    private UploadPhotoAdapter mediaAdapter;
     List<String> photos = null;
     // 取消发送按钮
     private TextView tvUploadCancel;
@@ -36,7 +32,7 @@ public class UploadMediaFileActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.uploadmedia);
+        setContentView(R.layout.picker_upload_photo);
         photos = getIntent().getStringArrayListExtra("mediapath");
         // 将这一次选中的图片放在selectedPhotos中
         Const.selectedPhotos.addAll(photos);
@@ -46,7 +42,7 @@ public class UploadMediaFileActivity extends Activity {
 
     private void initView() {
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        mediaAdapter = new UploadMediaAdapter(UploadMediaFileActivity.this, Const.selectedPhotos);
+        mediaAdapter = new UploadPhotoAdapter(UploadPhotoFileActivity.this, Const.selectedPhotos);
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(4, OrientationHelper.VERTICAL));
         recyclerView.setAdapter(mediaAdapter);
         tvUploadCancel = (TextView) findViewById(R.id.upload_cancel);

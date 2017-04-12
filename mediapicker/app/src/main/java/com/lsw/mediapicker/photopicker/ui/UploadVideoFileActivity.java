@@ -1,4 +1,4 @@
-package com.lsw.mediapicker.photopicker;
+package com.lsw.mediapicker.photopicker.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -12,9 +12,6 @@ import android.widget.TextView;
 import com.lsw.mediapicker.R;
 import com.lsw.mediapicker.photopicker.adapter.UploadVideoAdapter;
 import com.lsw.mediapicker.photopicker.utils.Const;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.List;
 
@@ -36,7 +33,7 @@ public class UploadVideoFileActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.uploadvideo);
+        setContentView(R.layout.picker_upload_video);
         videos = getIntent().getStringArrayListExtra("videopath");
         // 将这一次选中的图片放在selectedVideos中
         Const.selectedVideos.addAll(videos);

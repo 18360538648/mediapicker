@@ -13,7 +13,7 @@ import android.widget.RelativeLayout;
 
 import com.bumptech.glide.Glide;
 import com.lsw.mediapicker.R;
-import com.lsw.mediapicker.photopicker.PhotoPickerActivity;
+import com.lsw.mediapicker.photopicker.ui.PhotoPickerActivity;
 import com.lsw.mediapicker.photopicker.utils.AndroidLifecycleUtils;
 
 import java.io.File;
@@ -23,7 +23,7 @@ import java.util.ArrayList;
 /**
  * Created by Luosiwei on 2017/3/17.
  */
-public class UploadMediaAdapter extends RecyclerView.Adapter<UploadMediaAdapter.PhotoViewHolder> {
+public class UploadPhotoAdapter extends RecyclerView.Adapter<UploadPhotoAdapter.PhotoViewHolder> {
 
     private ArrayList<String> photoPaths = new ArrayList<String>();
     private LayoutInflater inflater;
@@ -35,7 +35,7 @@ public class UploadMediaAdapter extends RecyclerView.Adapter<UploadMediaAdapter.
 
     int MAX = 9;
 
-    public UploadMediaAdapter(Activity mContext, ArrayList<String> photoPaths) {
+    public UploadPhotoAdapter(Activity mContext, ArrayList<String> photoPaths) {
         this.photoPaths = photoPaths;
         this.mContext = mContext;
         inflater = LayoutInflater.from(mContext);
@@ -47,7 +47,7 @@ public class UploadMediaAdapter extends RecyclerView.Adapter<UploadMediaAdapter.
         View itemView = null;
         switch (viewType) {
             case TYPE_ADD:
-                itemView = inflater.inflate(R.layout.item_add, parent, false);
+                itemView = inflater.inflate(R.layout.picker_item_add_pic, parent, false);
                 RelativeLayout relativeLayout = (RelativeLayout) itemView.findViewById(R.id.rl_add_new);
                 relativeLayout.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -59,7 +59,7 @@ public class UploadMediaAdapter extends RecyclerView.Adapter<UploadMediaAdapter.
                 });
                 break;
             case TYPE_PHOTO:
-                itemView = inflater.inflate(R.layout.__picker_item_photo, parent, false);
+                itemView = inflater.inflate(R.layout.picker_item_photo, parent, false);
                 break;
         }
         return new PhotoViewHolder(itemView);

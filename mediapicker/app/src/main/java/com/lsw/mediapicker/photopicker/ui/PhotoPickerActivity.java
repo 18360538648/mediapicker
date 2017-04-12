@@ -1,4 +1,4 @@
-package com.lsw.mediapicker.photopicker;
+package com.lsw.mediapicker.photopicker.ui;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

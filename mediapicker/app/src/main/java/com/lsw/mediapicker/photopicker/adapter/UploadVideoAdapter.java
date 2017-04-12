@@ -13,7 +13,7 @@ import android.widget.RelativeLayout;
 
 import com.bumptech.glide.Glide;
 import com.lsw.mediapicker.R;
-import com.lsw.mediapicker.photopicker.PhotoPickerActivity;
+import com.lsw.mediapicker.photopicker.ui.PhotoPickerActivity;
 import com.lsw.mediapicker.photopicker.utils.AndroidLifecycleUtils;
 
 import java.io.File;
@@ -47,7 +47,7 @@ public class UploadVideoAdapter extends RecyclerView.Adapter<UploadVideoAdapter.
         View itemView = null;
         switch (viewType) {
             case TYPE_ADD:
-                itemView = inflater.inflate(R.layout.item_add_video, parent, false);
+                itemView = inflater.inflate(R.layout.picker_item_add_video, parent, false);
                 RelativeLayout relativeLayout = (RelativeLayout) itemView.findViewById(R.id.rl_add_new_video);
                 relativeLayout.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -60,7 +60,7 @@ public class UploadVideoAdapter extends RecyclerView.Adapter<UploadVideoAdapter.
                 break;
             case TYPE_PHOTO:
                 Log.i("lsw", "TYPE_PHOTO");
-                itemView = inflater.inflate(R.layout.__picker_item_video, parent, false);
+                itemView = inflater.inflate(R.layout.picker_item_video, parent, false);
                 break;
         }
         return new PhotoViewHolder(itemView);

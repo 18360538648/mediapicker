@@ -44,7 +44,7 @@ public class VideoDisplayAdapter extends SelectableVideoAdapter<VideoDisplayAdap
 
     @Override
     public VideoViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        final View itemView = inflater.inflate(R.layout.videoitem, parent, false);
+        final View itemView = inflater.inflate(R.layout.picker_video_item, parent, false);
         final VideoViewHolder holder = new VideoViewHolder(itemView);
         if (viewType == ITEM_TYPE_CAMERA) {
             holder.vSelected.setVisibility(View.GONE);

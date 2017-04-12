@@ -22,11 +22,11 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
 import com.lsw.mediapicker.R;
-import com.lsw.mediapicker.photopicker.UploadMediaFileActivity;
 import com.lsw.mediapicker.photopicker.adapter.PhotoDisplayAdapter;
 import com.lsw.mediapicker.photopicker.entity.Photo;
 import com.lsw.mediapicker.photopicker.entity.PhotoDirectory;
 import com.lsw.mediapicker.photopicker.event.OnItemCheckListener;
+import com.lsw.mediapicker.photopicker.ui.UploadPhotoFileActivity;
 import com.lsw.mediapicker.photopicker.utils.AndroidLifecycleUtils;
 import com.lsw.mediapicker.photopicker.utils.Const;
 import com.lsw.mediapicker.photopicker.utils.ImageCaptureManager;
@@ -88,7 +88,7 @@ public class PhotoFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Log.i("lsw", "btnSubmit");
-                Intent intent = new Intent(getActivity(), UploadMediaFileActivity.class);
+                Intent intent = new Intent(getActivity(), UploadPhotoFileActivity.class);
                 ArrayList<String> selectedPhotos = photoDisplayAdapter.getSelectedPhotoPaths();
                 intent.putStringArrayListExtra("mediapath", selectedPhotos);
                 startActivity(intent);
